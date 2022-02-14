@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Totaplayer</string>
+    <string name="song_name_placeholder">Song name</string>
+    <string name="negative_text">Cancel</string>
+    <string name="positive_text">OK</string>
+    <string name="language_choice_text">Choose your language:</string>
+    <string-array name="languages">
+        <item>English US</item>
+        <item>English UK</item>
+        <item>German</item>
+        <item>Spanish ES</item>
+        <item>Spanish MX</item>
+        <item>French FR</item>
+        <item>French CA</item>
+        <item>Italian</item>
+        <item>Dutch</item>
+        <item>Simplified Chinese</item>
+        <item>Traditional Chinese</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Russian</item>
+    </string-array>
+</resources>
