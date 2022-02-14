@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_light_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Totaplayer">
+        android:theme="@style/Splashscreen">
         <activity
             android:name="cat.itb.totaplayer.MainActivity"
             android:exported="true">

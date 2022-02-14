@@ -2,6 +2,7 @@ package cat.itb.totaplayer
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -27,6 +28,7 @@ class SongAdapter(songList: List<Song>, onClickListener: OnClickListener, titleL
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         holder.bindData(songs[position])
+        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.recycler_item)
     }
 
     override fun getItemCount(): Int {
@@ -66,7 +68,7 @@ class SongAdapter(songList: List<Song>, onClickListener: OnClickListener, titleL
             }
 
             itemView.setOnLongClickListener {
-                listener.onClickFavorite(songData)
+                listener.onClickFavorite(songData, absoluteAdapterPosition)
                 true
             }
         }

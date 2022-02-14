@@ -87,7 +87,7 @@ class SongListFragment : Fragment(), OnClickListener {
     }
 
     // Behaviour when long clicking an item, add song to favourites
-    override fun onClickFavorite(songData: Song) {
+    override fun onClickFavorite(songData: Song, position: Int) {
         CoroutineScope(Dispatchers.IO).launch {
             if(SongApplication.database.songDao().checkIfFavourite(songData.id) == 1){
                 withContext(Dispatchers.Main){ Toast.makeText(context, "Removed from favourites", Toast.LENGTH_SHORT).show() }
@@ -98,10 +98,8 @@ class SongListFragment : Fragment(), OnClickListener {
             }
         }
 
-        if (viewModel.favourites)
-            recyclerView.adapter?.notifyDataSetChanged()
-        else
-            recyclerView.adapter?.notifyItemChanged(songData.id - 1)
+        // Update the RecyclerView individual View with the new colors
+        recyclerView.adapter?.notifyItemChanged(position)
     }
 
     // Inflate options menu with the layout we created
