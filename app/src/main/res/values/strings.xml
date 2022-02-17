@@ -4,6 +4,12 @@
     <string name="negative_text">Cancel</string>
     <string name="positive_text">OK</string>
     <string name="language_choice_text">Choose your language:</string>
+    <string name="about_the_app_text">About the app</string>
+    <string name="about_info_text">- Tap to open the song detail and play it\n- Long tap to add it to favourites\n\nBlue background songs are in your favourites library, green ones aren\'t!</string>
+    <string name="show_all">Show all</string>
+    <string name="show_favourites">Show favourites</string>
+    <string name="change_language">Change language</string>
+    <string name="about">About</string>
     <string-array name="languages">
         <item>English US</item>
         <item>English UK</item>

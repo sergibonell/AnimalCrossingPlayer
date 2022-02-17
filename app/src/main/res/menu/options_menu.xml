@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/show_all" android:title="Show all"/>
-    <item android:id="@+id/show_favs" android:title="Show favourites"/>
-    <item android:id="@+id/language" android:title="Change language"/>
+    <item android:id="@+id/show_all" android:title="@string/show_all"/>
+    <item android:id="@+id/show_favs" android:title="@string/show_favourites"/>
+    <item android:id="@+id/language" android:title="@string/change_language"/>
+    <item android:id="@+id/about" android:title="@string/about"/>
 </menu>

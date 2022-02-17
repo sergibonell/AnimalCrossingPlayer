@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="60dp"
+    android:padding="10dp"
+    android:background="@color/secondaryLightColor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_the_app_text"
+        android:textSize="20sp"
+        android:textColor="@color/secondaryDarkColor"
+        android:textAlignment="center"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_info_text"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginVertical="10dp"/>
+
+    <Button
+        android:id="@+id/okay_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/secondaryDarkColor"
+        android:text="@string/positive_text"
+        android:layout_marginHorizontal="10dp"/>
+
+</LinearLayout>

@@ -115,6 +115,7 @@ class SongListFragment : Fragment(), OnClickListener {
             R.id.show_all -> selectAll()
             R.id.show_favs -> selectFavorites()
             R.id.language -> openLanguageDialog()
+            R.id.about -> openAboutDialog()
         }
         return super.onOptionsItemSelected(item)
     }
@@ -131,6 +132,10 @@ class SongListFragment : Fragment(), OnClickListener {
 
     private fun openLanguageDialog(){
         LanguageDialogFragment().show(childFragmentManager, LanguageDialogFragment.TAG)
+    }
+
+    private fun openAboutDialog(){
+        AboutDialogFragment().show(childFragmentManager, AboutDialogFragment.TAG)
     }
 
     // Update current language and settings in SharedPreferences
