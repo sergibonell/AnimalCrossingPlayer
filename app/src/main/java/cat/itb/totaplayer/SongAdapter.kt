@@ -54,6 +54,7 @@ class SongAdapter(songList: List<Song>, onClickListener: OnClickListener, titleL
                 var favourite = false
                 withContext(Dispatchers.IO){favourite = SongApplication.database.songDao().checkIfFavourite(songData.id) == 1}
 
+                // Have to specify both cases because if not, wrong colors show, could also set ViewHolder isRecyclable to false
                 if(favourite){
                     coverImageView.setBackgroundColor((ContextCompat.getColor(itemView.context, R.color.secondaryColor)))
                     nameTextView.setBackgroundColor((ContextCompat.getColor(itemView.context, R.color.secondaryDarkColor)))
