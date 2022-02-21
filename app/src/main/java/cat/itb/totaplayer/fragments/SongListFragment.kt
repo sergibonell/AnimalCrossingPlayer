@@ -1,6 +1,7 @@
 package cat.itb.totaplayer.fragments
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -69,7 +70,11 @@ class SongListFragment : Fragment(), OnClickListener {
     }
 
     private fun setupRecyclerView(songs: List<Song>?) {
-        recyclerView.layoutManager = GridLayoutManager(context, 2)
+        // If we're in landscape mode show more results per row
+        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
+            recyclerView.layoutManager = GridLayoutManager(context, 2)
+        else
+            recyclerView.layoutManager = GridLayoutManager(context, 4)
         recyclerView.adapter = SongAdapter(songs!!, this, language)
     }
 
@@ -108,7 +113,6 @@ class SongListFragment : Fragment(), OnClickListener {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    // TODO: Add an "About" option with information about how to add songs to favourites (long press)
     // Add behavior to every option from the options menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
