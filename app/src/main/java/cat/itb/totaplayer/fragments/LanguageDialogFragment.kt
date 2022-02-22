@@ -22,9 +22,6 @@ class LanguageDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog{
         binding = FragmentLanguageDialogBinding.inflate(layoutInflater)
 
-        // Inflate view with the custom dialog layout
-        val view = layoutInflater.inflate(R.layout.fragment_language_dialog, null)
-
         // Find views
         cancelButton = binding.cancelButton
         acceptButton = binding.okayButton

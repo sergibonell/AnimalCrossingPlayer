@@ -21,9 +21,6 @@ class AboutDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog{
         binding = FragmentAboutDialogBinding.inflate(layoutInflater)
 
-        // Inflate view with the custom dialog layout
-        val view = layoutInflater.inflate(R.layout.fragment_about_dialog, null)
-
         // Find views
         acceptButton = binding.okayButton
 
