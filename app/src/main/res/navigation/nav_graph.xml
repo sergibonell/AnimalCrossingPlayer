@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/songListFragment">
+
+    <fragment
+        android:id="@+id/songListFragment"
+        android:name="cat.itb.totaplayer.fragments.SongListFragment"
+        android:label="fragment_song_list"
+        tools:layout="@layout/fragment_song_list" >
+        <action
+            android:id="@+id/action_songListFragment_to_songDetailFragment"
+            app:destination="@id/songDetailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/songDetailFragment"
+        android:name="cat.itb.totaplayer.fragments.SongDetailFragment"
+        android:label="fragment_song_detail"
+        tools:layout="@layout/fragment_song_detail" >
+        <argument android:name="songData"
+            app:argType="cat.itb.totaplayer.api.Song" />
+    </fragment>
+</navigation>
